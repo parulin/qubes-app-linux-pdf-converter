@@ -41,6 +41,8 @@ extensions = [
 # Allows references to the docs in doc.qubes-os.org
 # i.e.: :doc:`core-admin:libvirt`
 intersphinx_mapping = {
+    "python": ("https://docs.python.org/", None),
+    "click": ("https://click.palletsprojects.com/en/stable/", None),
     # "qubes-doc": ("https://doc.qubes-os.org/en/latest/", None),
     # "core-admin": ("https://doc.qubes-os.org/projects/core-admin/en/latest/", None),
     # "core-admin-client": (
@@ -62,6 +64,7 @@ option_emphasise_placeholders = True
 # -- -- Options for the nitpicky mode ------------------------------------------
 
 nitpicky = True
+nitpick_ignore = [("py:class", "_asyncio.Task"), ("py:class", "tqdm.std.tqdm")]
 
 # -- Options for manual page output --------------------------------------------
 
